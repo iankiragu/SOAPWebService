@@ -4,7 +4,7 @@ function fetchstudent($admission_no)
 {
     echo "<br>";
     echo "<br>";
-    echo "Fetched Results";
+    echo "Record From Database:";
     echo "<br>";
 
     $conn = mysqli_connect('localhost', 'root', '', 'soapwork');
