@@ -26,6 +26,32 @@
 			background-size: cover;
 		}
 </style>
+<script language="javascript">
+function check()
+{
+if(document.form1.email.value=="")
+  {
+    alert("Plese Enter your Email Address");
+	document.form1.email.focus();
+	return false;
+  }
+  e=document.form1.email.value;
+		f1=e.indexOf('@');
+		f2=e.indexOf('@',f1+1);
+		e1=e.indexOf('.');
+		e2=e.indexOf('.',e1+1);
+		n=e.length;
+
+		if(!(f1>0 && f2==-1 && e1>0 && e2==-1 && f1!=e1+1 && e1!=f1+1 && f1!=n-1 && e1!=n-1))
+		{
+			alert("Please Enter valid Email");
+			document.form1.email.focus();
+			return false;
+		}
+  return true;
+  }
+  
+</script>
 </head>
 
 <body>
@@ -37,11 +63,11 @@
 				<div class="login100-form-title" style="background-image: url(hd.jpg);">
 
 					<span class="login100-form-title-1">
-				REGISTER
+				    REGISTER STUDENT
 
 					</span>
 				</div>
-				<form name= "form1" action="signup.php" method="post" class="login100-form validate-form">
+				<form name= "form1" action="signup.php" method="post" class="login100-form validate-form" onSubmit="return check();">
         <div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
             <span class="label-input100"><i class="fa fa-tasks"></i></span>
             <input class="input100" type="text" class= "input"placeholder="Enter Student ID" name="student_id" id="student_id"required>
