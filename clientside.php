@@ -46,6 +46,12 @@
             }
            
             ?>  
+                <div class="container-login100-form-btn">
+                    <center>
+                    <a href="studentform.php" style="font-size: 15px;"><i class="fa fa-arrow-circle-left"></i> Create New Record</a>
+                    </center>
+                    
+                </div>
         </form>
 			</div>
 		</div>

@@ -100,8 +100,11 @@ if(document.form1.email.value=="")
 						<button type="submit" class="login100-form-btn">Save Record</button>
 						</center>
 						<br><br>
-					</div>
-				
+          </div>
+          
+          <div class="container-login100-form-btn">
+            <a href="clientside.php" style="font-size: 15px;">View Exsiting Records  <i class="fa fa-arrow-circle-right"></i> </a>
+          </div>
 				</form>
 			</div>
 		</div>
