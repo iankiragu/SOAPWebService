@@ -25,23 +25,27 @@
                     <input class="input100" type="number" class= "input"placeholder="Enter Student ID" name="student_id" >
 					</div>
                     <div class="container-login100-form-btn">
-                        <button type="submit" class="login100-form-btn">Retrieve Record</button>
+                        <input name= "records" value="Retrieve Record" type="submit" class="login100-form-btn"></input>
                     </div>
 
                 </form>
                 <form>
             <?php
             require ('lib/nusoap.php');
+            if (isset($_POST["records"])){
             #pass wsdl file address
             $client = new nusoap_client("https://localhost/SOAP/serverside.php?wsdl");
 
-            $student_id= isset($_POST['student_id']);
+            $student_id= $_POST['student_id'];
             $client->call('fetchstudent', array("student_id" => $student_id));
             $name = $client->response;
             echo 'Response:<br>';
             echo '<br>';
             echo $name;
-            ?>
+
+            }
+           
+            ?>  
         </form>
 			</div>
 		</div>
